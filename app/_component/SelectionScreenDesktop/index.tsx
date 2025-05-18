@@ -1,4 +1,4 @@
-import styles from "./index.module.css"
+//import styles from "./index.module.css"
 import SelectionItems from "../SelectionScreenItems"
 import { ColorProps } from "../types"
 

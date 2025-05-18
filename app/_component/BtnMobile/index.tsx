@@ -1,4 +1,4 @@
-import styles from "./index.module.css"
+//import styles from "./index.module.css"
 import { ColorProps } from "../types"
 
 export default function BtnMobile ({handleBtn}: ColorProps) {
