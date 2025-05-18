@@ -32,7 +32,7 @@ export default function Home() {
   }
 
   const [bg, setBg] = useState("#ddd");
-  const handleColor = (e) => {
+  const handleColor = (e: React.ChangeEvent<HTMLInputElement>) => {
     setBg(e.target.value);
   };
   return (
