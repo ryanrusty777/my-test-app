@@ -2,7 +2,7 @@
   background: #ddd;
   display: flex;
   justify-content: center;
-  min-height: 90%;
+  min-height: 80%;
 }
 .resultItem {
   width: 275px;
