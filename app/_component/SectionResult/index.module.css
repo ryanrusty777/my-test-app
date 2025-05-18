@@ -1,0 +1,41 @@
+.sectionResult {
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  min-height: 90%;
+}
+.resultItem {
+  width: 275px;
+  filter: drop-shadow(1px 8px 1rem #000);
+  border: 5px solid #3C3636;
+  border-radius: 15px;
+  margin: 3rem auto;
+  max-height: 575px;
+  display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+.textContainer {
+  width: 100%;
+}
+.titlearea, .textarea {
+  overflow-wrap: break-word;  /* 単語の途中で改行 */
+  word-break: break-word;
+  white-space: normal; 
+  width: 95%;
+  margin: 1rem auto;   
+  text-align: center; 
+}
+.titlearea{
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+
+@media (min-width: 768px) {
+  .column {
+  width: 50%;
+  height: 100vh;
+}
+}

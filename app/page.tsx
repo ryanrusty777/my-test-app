@@ -1,106 +1,89 @@
 "use client"
 
 import styles from "./page.module.css";
-import { useEffect, useState } from "react";
-
+import { useState } from "react";
+import Result from "./_component/SectionResult";
+import useIsMobile from "./_component/useIsMobile";
+import BtnMobile from "./_component/BtnMobile";
+import SelectionScreenMobile from "./_component/SelectionScreenMobile";
+import SelectionScreenDesktop from "./_component/SelectionScreenDesktop";
 
 export default function Home() {
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile(); // 初期判定
-
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-  
-
-
-
-  const [designBtn, setDesignBtn] = useState(false);
+ const isMobile = useIsMobile(768);
+ 
+ const [designBtn, setDesignBtn] = useState(false);
   const handleBtn = () => {
     setDesignBtn( (prev) => !prev );
   }
 
-  const [bg, setBg] = useState("#ddd");
+  const [bg, setBg] = useState("#b98888");
   const handleColor = (e: React.ChangeEvent<HTMLInputElement>) => {
     setBg(e.target.value);
   };
+
+  const [titleText, setTitleText] = useState("Title Area")
+  const handleTitleText = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTitleText(e.target.value);
+  };
+
+  const [text, setText] = useState("type something...")
+  const handleText = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setText(e.target.value);
+  };
+
+  const [textColor, setTextColor] = useState("#ffffff");
+  const handleTextColor = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTextColor(e.target.value);
+  };
+
+
   return (
 
     <div 
     className={isMobile ? styles.mobileLayout : styles.desktopLayout}
     >
 
-      
-      <div className={`${styles.column} ${styles.sectionResult}`}>
-
-          <div 
-          className={styles.resultItem}
-          style={{ backgroundColor: bg }}
-          >
-          </div>
-      </div>
+      <Result 
+      bg={bg} 
+      text={text} 
+      titleText={titleText} 
+      textColor={textColor}
+      />
 
       <div className={styles.column}>
-            {isMobile ?
-            <section>
-            <button
-            onClick={handleBtn}
-            >
-              Design
-            </button>
-          </section> 
-          :
-          <section>
-          <h3>Color</h3>
-          <div className="color-picker-flex">
-              <label>
-                <p>Background Color Code: {bg}</p>
-
-                <input 
-                type="color" 
-                onChange={handleColor}
-                value={bg}          
-                />
-                
-              
-              </label>
-            </div>
-        </section>
-          }
+            {isMobile ? 
+            <BtnMobile 
+            handleBtn={handleBtn}
+            /> 
+            : 
+            <SelectionScreenDesktop
+            bg={bg}
+            handleColor={handleColor}
+            titleText={titleText}
+            handleTitleText={handleTitleText}
+            text={text}
+            handleText={handleText}
+            textColor={textColor}
+            handleTextColor={handleTextColor}
+            />
+            }
       </div>
 
 
 
-    { designBtn &&
-      <section className={styles.selectionScreen}>
-      <h3>カラー</h3>
-      <div className="color-picker-flex">
-          <label>
-            <p>バックグラウンドカラーコード: {bg}</p>
-
-            <input 
-            type="color" 
-            onChange={handleColor}
-            value={bg}          
-            />
-            
-           
-          </label>
-        </div>
-        <button
-      onClick={handleBtn}
-      >
-        Done
-      </button>
-    </section>
-    }
+    { designBtn && 
+    <SelectionScreenMobile
+        bg={bg}
+        handleColor={handleColor}
+        titleText={titleText}
+        handleTitleText={handleTitleText}
+        text={text}
+        handleText={handleText}
+        textColor={textColor}
+        handleTextColor={handleTextColor}
+        handleBtn={handleBtn}
+    />}
   
   
     </div>

@@ -16,19 +16,7 @@
   font-family: var(--font-geist-sans);
 }
 
-.sectionResult {
-  background: #ddd;
-  display: flex;
-  justify-content: center;
-  min-height: 80%;
-}
-.resultItem {
-  width: 330px;
-  filter: drop-shadow(1px 8px 1rem #000);
-  border: 5px solid #3C3636;
-  border-radius: 15px;
-  margin: 3rem auto;
-}
+
 
 .selectionScreen {
   width: 90%;
