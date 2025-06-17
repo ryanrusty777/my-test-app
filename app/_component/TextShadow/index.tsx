@@ -5,7 +5,7 @@ import { useTextShadow } from '@/app/context/TextShadowContext';
 import styles from "./index.module.css"
 
 export default function TextShadow() {
-    const { t, i18n } = useTranslation('common');
+    const { t } = useTranslation('common');
       const {
         xOffset, setXOffset,
         yOffset, setYOffset,
