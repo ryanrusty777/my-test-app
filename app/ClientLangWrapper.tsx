@@ -12,7 +12,7 @@ export default function ClientLangWrapper({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const { t, i18n } = useTranslation('common');
+  const { i18n } = useTranslation('common');
   const [currentLang, setCurrentLang] = useState("en");
   
     useEffect(() => {

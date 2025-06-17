@@ -8,7 +8,7 @@ import { useDesignSelection } from "@/app/context/DesignSelectionContext";
 
 
 export default function SelectionItems() {
-   const { t, i18n } = useTranslation('common');
+   const { t } = useTranslation('common');
   
   const {
         bg,

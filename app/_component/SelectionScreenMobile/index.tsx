@@ -4,7 +4,7 @@ import SelectionItems from "../SelectionScreenItems";
 import { useTranslation } from 'react-i18next';
 
 export default function SelectionScreenMobile({handleBtn} :ColorProps) {
-  const { t, i18n } = useTranslation('common');
+  const { t } = useTranslation('common');
 
     return(
         <section className={styles.selectionScreen}>
