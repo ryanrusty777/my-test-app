@@ -1,0 +1,19 @@
+{
+    "colorSelection": "Színválasztás",
+    "backgroundColorCode": "Háttérszín kód",
+    "titleArea": "Cím terület",
+    "titleFontFamily": "Cím betűtípus",
+    "textArea": "Szövegterület",
+    "typeSomething": "írj valamit...",
+    "textColorCode": "Szövegszín kód",
+    "chooseFontFamily": "Betűtípus választása",
+    "xOffset": "X eltolás",
+    "yOffset": "Y eltolás",
+    "blurRadius": "Elmosás sugara",
+    "shadowColor": "Árnyékszín",
+    "css": "CSS",
+    "copyCss": "📋 CSS másolása",
+    "design": "Dizájn",
+    "done": "Kész",
+     "copied": "✅Másolva"
+  }

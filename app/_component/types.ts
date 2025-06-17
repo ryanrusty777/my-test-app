@@ -8,5 +8,11 @@ export type ColorProps = {
     handleText?:(e: React.ChangeEvent<HTMLInputElement>) => void
     textColor?: string
     handleTextColor?:(e: React.ChangeEvent<HTMLInputElement>) => void
+    lang?: string
+    FONT_OPTIONS?: { value: string; label: string }[];
+    selectedFont?: string
+    handleFont?:(e: React.ChangeEvent<HTMLSelectElement>) => void
+    selectedTitleFont?: string
+    handleTitleFont?:(e: React.ChangeEvent<HTMLSelectElement>) => void
 }
 

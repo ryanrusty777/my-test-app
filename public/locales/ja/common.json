@@ -1,0 +1,21 @@
+{
+    "hello": "こんにちは",
+    "color": "色",
+    "backgroundColorCode": "背景色コード",
+    "titleArea": "タイトルエリア",
+    "titleFontFamily": "タイトルフォントファミリー",
+    "textArea": "テキストエリア",
+    "typeSomething": "何か入力してください...",
+    "textColorCode": "文字色コード",
+    "chooseFontFamily": "フォントファミリーを選択",
+    "notoSans": "Noto Sans",
+    "xOffset": "Xオフセット",
+    "yOffset": "Yオフセット",
+    "blurRadius": "ぼかし半径",
+    "shadowColor": "影の色",
+    "css": "CSS",
+    "copyCss": "📋 CSSをコピー",
+    "design": "デザイン",
+    "done": "完了",
+     "copied": "✅コピーしました"
+}

@@ -23,6 +23,11 @@ a {
   text-decoration: none;
 }
 
+input[type="color"] {
+  cursor: pointer;
+  block-size: 35px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -8,4 +8,12 @@
   position: fixed;
   background: #fefaef;
     color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectionScreen button{
+    padding: .3rem;
 }

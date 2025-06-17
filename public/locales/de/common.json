@@ -1,0 +1,20 @@
+{
+    "colorSelection": "Farbauswahl",
+    "backgroundColorCode": "Hintergrundfarbcode",
+    "titleArea": "Titelbereich",
+    "titleFontFamily": "Titel-Schriftart",
+    "textArea": "Textbereich",
+    "typeSomething": "etwas eingeben...",
+    "textColorCode": "Textfarbcode",
+    "chooseFontFamily": "Schriftart wählen",
+    "notoSans": "Noto Sans",
+    "xOffset": "X-Versatz",
+    "yOffset": "Y-Versatz",
+    "blurRadius": "Unschärferadius",
+    "shadowColor": "Schattenfarbe",
+    "css": "CSS",
+    "copyCss": "📋 CSS kopieren",
+    "design": "Design",
+    "done": "Fertig",
+     "copied": "✅Kopiert"
+  }

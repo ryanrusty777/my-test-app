@@ -1,7 +1,18 @@
 import styles from "./index.module.css"
-import { ColorProps } from "../types"
+import { useDesignSelection } from "@/app/context/DesignSelectionContext"
+import { useTextShadow } from "@/app/context/TextShadowContext"
 
-export default function Result({bg, titleText, text, textColor}:ColorProps){
+export default function Result(){
+  const {
+    bg, 
+    titleText, 
+    text, 
+    textColor, 
+    selectedTitleFont,
+    selectedFont
+  } = useDesignSelection();
+
+  const { textShadow } = useTextShadow();
 
     return(
         <div className={`${styles.column} ${styles.sectionResult}`}>
@@ -14,11 +25,13 @@ export default function Result({bg, titleText, text, textColor}:ColorProps){
             className={styles.textContainer}
             style={{ color: textColor }}
             >
-                  <div className={styles.titlearea}>
-                <p>{titleText}</p>
+                  <div 
+                  className={styles.titlearea}>
+                <p style={{ textShadow, fontFamily: selectedTitleFont }}>{titleText}</p>
                 </div> 
-              <div className={styles.textarea}>
-                <p>{text}</p>
+              <div
+              className={styles.textarea}>
+                <p style={{fontFamily: selectedFont }}>{text}</p>
                 </div> 
             </div>
           </div>

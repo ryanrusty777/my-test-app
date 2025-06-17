@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,8 +23,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
-    <html lang="en">
+    <html>
+      <head>
+        <link 
+        rel="preconnect" 
+        href="https://fonts.googleapis.com"
+        />
+        
+        <link 
+        rel="preconnect" 
+        href="https://fonts.gstatic.com" 
+        crossOrigin="anonymous"
+         />
+        
+        
+        <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif&family=Roboto&family=Open+Sans&family=Zen+Kaku+Gothic+New&family=Zen+Old+Mincho&family=Sawarabi+Gothic&family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Kosugi&family=Kosugi+Maru&display=swap" 
+        rel="stylesheet"
+        />
+
+        
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>

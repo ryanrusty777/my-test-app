@@ -1,0 +1,14 @@
+.screenItems {
+    display: flex;
+    padding: 1rem;
+}
+.screenItems div {
+    margin: 0 1rem;
+}
+.screenItems label {
+    margin: .5rem auto;
+}
+.screenItems input, .screenItems select{
+    margin: .5rem auto;
+    width: 80%;
+}

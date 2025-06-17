@@ -1,24 +1,19 @@
 import styles from "./index.module.css";
 import { ColorProps } from "../types";
 import SelectionItems from "../SelectionScreenItems";
+import { useTranslation } from 'react-i18next';
 
-export default function SelectionScreenMobile({bg, handleColor, titleText, handleTitleText, text, handleText, textColor, handleTextColor, handleBtn} :ColorProps) {
+export default function SelectionScreenMobile({handleBtn} :ColorProps) {
+  const { t, i18n } = useTranslation('common');
+
     return(
         <section className={styles.selectionScreen}>
       <SelectionItems 
-       bg={bg}
-    handleColor={handleColor}
-    titleText={titleText}
-    handleTitleText={handleTitleText}
-    text={text}
-    handleText={handleText}
-    textColor={textColor}
-    handleTextColor={handleTextColor}
       />
         <button
       onClick={handleBtn}
       >
-        Done
+        {t("done")}
       </button>
     </section>
     )

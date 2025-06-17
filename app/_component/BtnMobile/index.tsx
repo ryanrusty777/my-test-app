@@ -1,13 +1,16 @@
-//import styles from "./index.module.css"
+
 import { ColorProps } from "../types"
+import { useTranslation } from 'react-i18next';
+import styles from "./index.module.css"
 
 export default function BtnMobile ({handleBtn}: ColorProps) {
+   const { t, i18n } = useTranslation('common');
     return (
-        <section>
+        <section className={styles.btn}>
             <button
             onClick={handleBtn}
             >
-              Design
+              {t("design")}
             </button>
           </section>
     ) 

@@ -1,12 +1,15 @@
 "use client"
 
 import styles from "./page.module.css";
-import { useState } from "react";
+import {useState } from "react";
 import Result from "./_component/SectionResult";
-import useIsMobile from "./_component/useIsMobile";
+import useIsMobile from "./_hooks/useIsMobile";
 import BtnMobile from "./_component/BtnMobile";
 import SelectionScreenMobile from "./_component/SelectionScreenMobile";
 import SelectionScreenDesktop from "./_component/SelectionScreenDesktop";
+import { DesignSelectionProvider } from "./context/DesignSelectionContext";
+import { TextShadowProvider } from "./context/TextShadowContext";
+import TextShadow from "./_component/TextShadow";
 
 export default function Home() {
 
@@ -17,77 +20,41 @@ export default function Home() {
     setDesignBtn( (prev) => !prev );
   }
 
-  const [bg, setBg] = useState("#b98888");
-  const handleColor = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setBg(e.target.value);
-  };
-
-  const [titleText, setTitleText] = useState("Title Area")
-  const handleTitleText = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTitleText(e.target.value);
-  };
-
-  const [text, setText] = useState("type something...")
-  const handleText = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setText(e.target.value);
-  };
-
-  const [textColor, setTextColor] = useState("#ffffff");
-  const handleTextColor = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTextColor(e.target.value);
-  };
 
 
   return (
-
-    <div 
+    <DesignSelectionProvider>
+      <TextShadowProvider>
+      <div 
     className={isMobile ? styles.mobileLayout : styles.desktopLayout}
     >
 
-      <Result 
-      bg={bg} 
-      text={text} 
-      titleText={titleText} 
-      textColor={textColor}
-      />
+      <Result />
 
       <div className={styles.column}>
             {isMobile ? 
+            <>
             <BtnMobile 
             handleBtn={handleBtn}
             /> 
+            <TextShadow/>
+            </>
             : 
-            <SelectionScreenDesktop
-            bg={bg}
-            handleColor={handleColor}
-            titleText={titleText}
-            handleTitleText={handleTitleText}
-            text={text}
-            handleText={handleText}
-            textColor={textColor}
-            handleTextColor={handleTextColor}
-            />
+            <SelectionScreenDesktop/>
             }
+            
+      
+
       </div>
 
-
-
-    { designBtn && 
-    <SelectionScreenMobile
-        bg={bg}
-        handleColor={handleColor}
-        titleText={titleText}
-        handleTitleText={handleTitleText}
-        text={text}
-        handleText={handleText}
-        textColor={textColor}
-        handleTextColor={handleTextColor}
-        handleBtn={handleBtn}
-    />}
-  
-  
+      { designBtn && 
+      <SelectionScreenMobile
+      handleBtn={handleBtn}
+      />
+      }
     </div>
-    
 
+      </TextShadowProvider>
+    </DesignSelectionProvider>
   );
 }
