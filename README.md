@@ -1,39 +1,19 @@
 # 📷 画像アップロードアプリ
 
 ## 🚀 概要
-画像をドラッグ&ドロップ、もしくはファイル選択して表示できるWebアプリです。モバイル・PCの両対応。
+カラーやフォントファミリーを選択してデザインを確認できるWebアプリです。モバイル・PCの両対応。
 
 ## 🌟 主な機能
-- 画像のドラッグ＆ドロップアップロード  
+
 - プレビュー表示  
 - レスポンシブ対応（スマホ・PC）  
 - URLによる言語切り替え（i18next）  
-- ダークモード対応（任意）
 
 ## 🔧 使用技術
 - React / Next.js 15  
-- Tailwind CSS・CSS Modules 併用  
+- CSS・CSS Modules 併用  
 - TypeScript  
 - i18next による多言語対応
-
-
-# Image Drop App
-
-## 🚀 Overview
-A simple image upload and preview web app. Users can either drag and drop images or select from file input. Responsive UI for mobile and desktop.
-
-## 🌟 Features
-- Drag & drop image upload
-- Image preview with styling
-- Responsive design (mobile / desktop)
-- Language switching via URL
-- Dark mode compatible (optional)
-
-## 🔧 Tech Stack
-- React + Next.js 15
-- Tailwind CSS / CSS Modules
-- TypeScript
-- i18next for multi-language support
 
 
 

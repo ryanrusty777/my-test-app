@@ -2,9 +2,7 @@ import styles from "./index.module.css"
 import { useDesignSelection } from "@/app/context/DesignSelectionContext"
 import { useTextShadow } from "@/app/context/TextShadowContext"
 
-type Props = {
-  designBtn: boolean
-}
+
 
 export default function Result(){
   const {
