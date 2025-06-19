@@ -13,3 +13,4 @@ export const FONT_OPTIONS = [
   { label: "Kosugi", value: "'Kosugi', sans-serif" },
   { label: "Kosugi Maru", value: "'Kosugi Maru', sans-serif" },
 ];
+

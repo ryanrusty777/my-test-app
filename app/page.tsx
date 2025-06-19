@@ -10,6 +10,7 @@ import SelectionScreenDesktop from "./_component/SelectionScreenDesktop";
 import { DesignSelectionProvider } from "./context/DesignSelectionContext";
 import { TextShadowProvider } from "./context/TextShadowContext";
 import TextShadow from "./_component/TextShadow";
+import LanguageSelection from "./_component/LanguageSelection";
 
 export default function Home() {
 
@@ -21,10 +22,10 @@ export default function Home() {
   }
 
 
-
   return (
     <DesignSelectionProvider>
       <TextShadowProvider>
+        <LanguageSelection/>
       <div 
     className={isMobile ? styles.mobileLayout : styles.desktopLayout}
     >

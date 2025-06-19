@@ -2,6 +2,10 @@ import styles from "./index.module.css"
 import { useDesignSelection } from "@/app/context/DesignSelectionContext"
 import { useTextShadow } from "@/app/context/TextShadowContext"
 
+type Props = {
+  designBtn: boolean
+}
+
 export default function Result(){
   const {
     bg, 
@@ -13,6 +17,9 @@ export default function Result(){
   } = useDesignSelection();
 
   const { textShadow } = useTextShadow();
+  
+    //console.log(designBtn);
+  
 
     return(
         <div className={`${styles.column} ${styles.sectionResult}`}>

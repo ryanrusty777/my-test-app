@@ -27,7 +27,7 @@ export default function SelectionItems() {
 
   return (
        <ClientLangWrapper>
-        <h3>Color Selection</h3>
+        <h3>{t("colorSelection")}</h3>
             <div className={styles.screenItems}>
               <div>
                 <label>

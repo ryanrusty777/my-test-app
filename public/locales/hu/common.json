@@ -15,5 +15,10 @@
     "copyCss": "📋 CSS másolása",
     "design": "Dizájn",
     "done": "Kész",
-     "copied": "✅Másolva"
+    "copied": "✅Másolva",
+    "language": "Nyelv",
+    "hungarian": "Magyar",
+    "japanese": "Japán",
+    "english": "Angol",
+    "german": "Német"
   }

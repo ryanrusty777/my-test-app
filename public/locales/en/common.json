@@ -19,5 +19,10 @@
     "copyCss": "📋 Copy CSS",
     "design": "Design",
     "done": "Done",
-     "copied": "✅Copied"
+     "copied": "✅Copied",
+     "language": "Language",
+     "hungarian": "Hungarian",
+     "japanese": "Japanese",
+     "english": "English",
+     "german": "German"
   }

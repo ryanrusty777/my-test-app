@@ -16,5 +16,10 @@
     "copyCss": "📋 CSS kopieren",
     "design": "Design",
     "done": "Fertig",
-     "copied": "✅Kopiert"
+    "copied": "✅Kopiert",
+    "language": "Sprache",
+    "hungarian": "Ungarisch",
+    "japanese": "Japanisch",
+    "english": "Englisch",
+    "german": "Deutsch"
   }
